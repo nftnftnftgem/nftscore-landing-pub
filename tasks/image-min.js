@@ -13,9 +13,9 @@ module.exports = function (options) {
     return gulp.src(`./${options.src}/images/**/*`)
       .pipe(newer(`./${options.dest}/images/`))
       .pipe(imagemin([
-        imagemin.jpegtran({
-          progressive: true
-        }),
+        // imagemin.jpegtran({
+        //   progressive: true
+        // }),
         imagemin.optipng({
           optimizationLevel: 5
         }),
