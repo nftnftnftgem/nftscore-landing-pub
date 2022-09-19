@@ -1,0 +1,49 @@
+.main-title {
+	font-family: $primary-font;
+	font-weight: 800;
+	font-size: 3.8rem;
+	line-height: 1.2;
+	color: $black;
+
+	@include media(">=tablet") {
+		font-size: 5.1rem;
+		line-height: 1;
+	}
+	@include media(">=desktop") {
+		font-size: 6.4rem;
+	}
+	span {
+		color: rgba(40, 51, 66, 0.33);
+	}
+}
+
+.subtitle {
+	font-size: 1.6rem;
+	line-height: 1.1;
+	color: rgba($black, 0.7);
+}
+
+.section-title {
+	font-size: 2rem;
+}
+
+.base-text {
+	font-size: 1.6rem;
+}
+
+.typography {
+	h1 {
+		font-size: 3rem;
+		margin-bottom: 3rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	p {
+		font-size: 1.6rem;
+		margin-bottom: 3rem;
+	}
+}

@@ -1,0 +1,167 @@
+.community-section {
+	padding: 5rem 0;
+	
+
+	@include media(">=desktop") {
+		padding: 10rem 0;
+	}
+
+	.main-title {
+		max-width: 38rem;
+		margin-bottom: 3rem;
+
+		@include media(">=desktop") {
+			margin-bottom: 6rem;
+		}
+	}
+}
+
+.community-content {
+	background: #fff86c;
+	padding: 3rem;
+	overflow: hidden;
+
+	@include media(">=tablet") {
+		padding: 4rem;
+	}
+
+	@include media(">=desktop") {
+		padding: 7rem 7rem 0 7rem;
+	}
+}
+
+.community-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -2rem;
+
+	@include media(">=desktop") {
+		margin: 0 -3.3rem;
+		flex-wrap: nowrap;
+	}
+}
+
+.community {
+	padding: 2rem;
+	width: 100%;
+
+	@include media(">=tablet") {
+		width: calc(100% / 3);
+	}
+
+	@include media(">=desktop") {
+		width: auto;
+		padding: 0 3.3rem;
+
+		&:nth-child(2) {
+			margin-top: 5.5rem;
+		}
+
+		&:nth-child(3) {
+			margin-top: -25.5rem;
+		}
+	}
+
+	&:nth-child(4) {
+		margin-top: -40rem;
+		display: none;
+
+		@include media(">=desktop") {
+			display: block;
+		}
+	}
+
+	&__wrap {
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		border-radius: 11.5rem;
+		padding: 6rem 3rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		transition: $base-transition;
+		position: relative;
+
+		@include media(">=desktop") {
+			width: 23rem;
+		}
+
+		&:before,
+		&:after {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			content: "";
+			width: 23rem;
+			height: 23rem;
+			background: rgba(255, 255, 255, 0.5);
+			border-radius: 50%;
+			transform: translateY(100%);
+			pointer-events: none;
+			display: none;
+
+			@include media(">=desktop") {
+				display: block;
+			}
+		}
+
+		&:before {
+			transform: translateY(200%);
+		}
+
+		&--last {
+			background-color: rgba(255, 255, 255, 0.5);
+			border-color: rgba(255, 255, 255, 0.5);
+			min-height: 46rem;
+			pointer-events: none;
+
+			&:before,
+			&:after {
+				height: 32.5rem;
+				border-radius: 13.5rem;
+			}
+		}
+		&:hover {
+			background-color: $white;
+			border-color: $white;
+
+			.community__link {
+				background: #fffcb6;
+			}
+		}
+	}
+
+	&__icon {
+		font-size: 3rem;
+		margin-bottom: 2.5rem;
+	}
+
+	&__name {
+		font-weight: 700;
+		font-size: 2rem;
+		color: $black;
+		margin-bottom: 1rem;
+	}
+
+	&__desc {
+		max-width: 14rem;
+		font-size: 1.4rem;
+		text-align: center;
+		color: $black;
+		margin-bottom: 2.5rem;
+	}
+
+	&__link {
+		width: 5rem;
+		height: 5rem;
+		border-radius: 50%;
+		background-color: $white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:hover {
+			background: #fff86c !important;
+		}
+	}
+}

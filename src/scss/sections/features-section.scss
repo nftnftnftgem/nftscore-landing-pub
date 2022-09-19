@@ -1,0 +1,98 @@
+.features-section {
+	background-color: #e0eaf1;
+	padding: 5rem 0;
+	overflow: hidden;
+
+	@include media(">=desktop") {
+		padding: 7.5rem 0;
+	}
+
+	.main-title {
+		margin-bottom: 2rem;
+
+		span {
+			color: $white;
+		}
+	}
+
+	.subtitle {
+		max-width: 52rem;
+		margin-bottom: 4rem;
+
+		@include media(">=desktop") {
+			margin-bottom: 7.5rem;
+		}
+	}
+}
+
+.feat-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -2rem;
+
+	@include media(">=widescreen") {
+		margin: -2.5rem -7.5rem;
+	}
+}
+
+.feat {
+	width: 100%;
+	padding: 2rem;
+
+	@include media(">=tablet") {
+		width: 50%;
+	}
+
+	@include media(">=widescreen") {
+		padding: 2.5rem 7.5rem;
+	}
+
+	&__wrap {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: row;
+	}
+
+	&__icon {
+		flex: none;
+		width: 6rem;
+		height: 6rem;
+		font-family: $primary-font;
+		font-weight: 800;
+		font-size: 2.4rem;
+		color: $black;
+		background-color: #fff86c;
+		border-radius: 50%;
+		margin-right: 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@include media(">=tablet") {
+			margin-right: 2.8rem;
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		max-width: 386px;
+	}
+
+	&__name {
+		font-family: "Inter";
+		font-weight: 800;
+		font-size: 2.4rem;
+		line-height: 1.2;
+		color: $black;
+		margin-bottom: 2rem;
+	}
+
+	&__text {
+		font-family: "Inter";
+		font-weight: 400;
+		font-size: 1.6rem;
+		line-height: 1.1;
+		color: rgba($black, 0.75);
+	}
+}

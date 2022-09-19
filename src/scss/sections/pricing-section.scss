@@ -1,0 +1,168 @@
+.pricing-section {
+	padding: 5rem 0 0;
+
+	@include media(">=desktop") {
+		padding: 10rem 0 0;
+	}
+
+	.main-title {
+		margin-bottom: 2rem;
+	}
+
+	.subtitle {
+		margin-bottom: 2rem;
+	}
+}
+
+.table {
+	width: 100%;
+
+	.subtitle {
+		margin-bottom: 0;
+	}
+
+	&__row {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid rgba(160, 166, 174, 0.5);
+		padding: 1.5rem 0;
+	}
+
+	&__head {
+		border-color: transparent;
+	}
+
+	&__block {
+		display: flex;
+		justify-content: center;
+
+		width: 20%;
+		padding: 0 1rem;
+
+		@include media(">=tablet") {
+			width: 15%;
+		}
+
+		&:first-child {
+			padding: 0 1rem 0 0;
+			justify-content: flex-start;
+
+			@include media(">=tablet") {
+				width: 40%;
+				padding: 0 3rem 0 0;
+			}
+		}
+
+		.base-text {
+			font-size: 1.2rem;
+
+			@include media(">=tablet") {
+				font-size: 1.6rem;
+			}
+		}
+	}
+
+	&__mark {
+		width: 1.5rem;
+		height: 1rem;
+		border-left: 3px solid $black;
+		border-bottom: 3px solid $black;
+		transform: rotate(-45deg);
+
+		&--primary {
+			border-color: #c2c2c2;
+		}
+
+		&--secondary {
+			border-color: #749fb8;
+		}
+
+		&--tertiary {
+			border-color: #ff9494;
+		}
+
+		&--quaternary {
+			border-color: #181818;
+		}
+	}
+}
+
+.price {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@include media(">=desktop") {
+		flex-direction: row;
+	}
+
+	&__img {
+		width: 2.2rem;
+		flex: none;
+		margin-bottom: 1rem;
+		@include media(">=desktop") {
+			margin: 0 1rem 0 0;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include media(">=desktop") {
+			align-items: flex-start;
+		}
+	}
+
+	&__text {
+		font-weight: 500;
+		text-align: center;
+		font-size: 1rem;
+		color: rgba(0, 0, 0, 0.7);
+		min-height: 2.3rem;
+
+		@include media(">=tablet") {
+			font-size: 1.2rem;
+			min-height: 2.8rem;
+		}
+		@include media(">=desktop") {
+			text-align: left;
+			min-height: 1.4rem;
+		}
+
+		&:last-child {
+			text-transform: lowercase;
+		}
+	}
+
+	&__count {
+		font-weight: 800;
+
+		font-size: 2rem;
+		color: $black;
+		@include media(">=tablet") {
+			font-size: 3rem;
+		}
+		@include media(">=desktop") {
+			font-size: 4rem;
+		}
+	}
+}
+
+.mobile {
+	@include media(">=tablet") {
+		display: none;
+	}
+}
+
+.tablet {
+	display: none;
+	@include media(">=tablet") {
+		display: block;
+	}
+}

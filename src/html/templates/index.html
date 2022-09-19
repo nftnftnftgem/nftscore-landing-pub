@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('../partials/head/head.html')
+
+<body>
+	<div class="wrapper">
+		@@include('../layout/header.html')
+		<main class="main">
+			@@include('../sections/intro-section/intro-section.html')
+			@@include('../sections/databases-section/databases-section.html')
+			<div class="container">
+				<div class="separator">
+					<span class="separator__text">FIND NEW NTFS</span>
+					<span class="separator__line"></span>
+				</div>
+			</div>
+			@@include('../sections/ranking-section/ranking-section.html')
+			@@include('../sections/features-section/features-section.html')
+			@@include('../sections/pricing-section/pricing-section.html')
+			@@include('../sections/community-section/community-section.html')
+			<div class="container">
+				<div class="separator">
+					<span class="separator__text">nftscore</span>
+					<span class="separator__line"></span>
+				</div>
+			</div>
+		</main>
+		<div class="svg-sprite">
+			@@include('../partials/sprite.html')
+		</div>
+		@@include('../layout/footer.html')
+	</div>
+	@@include('../partials/scripts/common.html')
+</body>
+
+</html>
