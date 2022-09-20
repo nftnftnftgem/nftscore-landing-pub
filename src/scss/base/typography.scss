@@ -2,8 +2,9 @@
 	font-family: $primary-font;
 	font-weight: 800;
 	font-size: 3.8rem;
-	line-height: 1.2;
+	line-height: 1.1;
 	color: $black;
+	letter-spacing: 2px;
 
 	@include media(">=tablet") {
 		font-size: 5.1rem;
@@ -19,7 +20,7 @@
 
 .subtitle {
 	font-size: 1.6rem;
-	line-height: 1.1;
+	line-height: 1.2;
 	color: rgba($black, 0.7);
 }
 
@@ -29,6 +30,7 @@
 
 .base-text {
 	font-size: 1.6rem;
+	line-height: 1.2;
 }
 
 .typography {

@@ -2,7 +2,6 @@
 	background-color: #e0eaf1;
 	padding: 5rem 0 0;
 	position: relative;
-	
 
 	@include media(">=tablet") {
 		padding: 10rem 0 0;
@@ -15,7 +14,7 @@
 	.main-title {
 		margin-bottom: 3rem;
 		text-align: center;
-		max-width: 99rem;
+		max-width: 103rem;
 
 		@include media(">=tablet") {
 			margin-bottom: 4rem;
@@ -27,35 +26,33 @@
 		z-index: 1;
 	}
 
-	
-.decor {
-	position: absolute;
-	top: 4rem;
-	width: 10rem;
-	height: 10rem;
-	border-radius: 50%;
-	z-index: 0;
-	@include media(">=tablet") {
-		top: 7rem;
-		width: 19rem;
-		height: 19rem;
-	}
-
-	&--right {
-		right: 2rem;
-		background-color: #ffece1;
-		clip-path: polygon(0 0, 100% 0, 100% 100%);
+	.decor {
+		position: absolute;
+		top: 4rem;
+		width: 10rem;
+		height: 10rem;
+		border-radius: 50%;
+		z-index: 0;
 		@include media(">=tablet") {
-			right: 5rem;
+			top: 7rem;
+			width: 19rem;
+			height: 19rem;
+		}
+
+		&--right {
+			right: 2rem;
+			background-color: #ffece1;
+			clip-path: polygon(0 0, 100% 0, 100% 100%);
+			@include media(">=tablet") {
+				right: 5rem;
+			}
+		}
+
+		&--left {
+			left: -1rem;
+			background-color: $white;
 		}
 	}
-
-	&--left {
-		left: -1rem;
-		background-color: $white;
-	}
-}
-
 }
 
 .intro {
@@ -89,6 +86,7 @@
 	font-size: 1.4rem;
 	margin-bottom: 3rem;
 	text-align: center;
+	color: #749fb8;
 
 	@include media(">=tablet") {
 		font-size: 1.6rem;
@@ -105,12 +103,28 @@
 	color: $white;
 	padding: 1.8rem;
 	background-color: $black;
-	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.17);
 	border-radius: 1rem;
 	transition: $base-transition;
+	position: relative;
+
+	&:after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		border-radius: 1rem;
+		bottom: -5px;
+		right: -5px;
+		background: rgba(0, 0, 0, 0.17);
+		z-index: -1;
+		transition: $base-transition;
+		pointer-events: none;
+	}
 }
 
 .intro-btn:hover {
-	transform: translateX(5px) translateY(5px);
-	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.17);
+	&:after {
+		bottom: 0;
+		right: 0;
+	}
 }
