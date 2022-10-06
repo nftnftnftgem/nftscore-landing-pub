@@ -41,3 +41,5 @@ tmp
 
 #npm dependencies
 package-lock.json
+
+production/*
