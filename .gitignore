@@ -32,7 +32,7 @@ node_modules/
 node_modules
 *.map
 /*.html
-.tmp
+.t
 tmp
 
 # wordpress configs and uploads
@@ -43,3 +43,4 @@ tmp
 package-lock.json
 
 production/*
+nftscore-landing/
