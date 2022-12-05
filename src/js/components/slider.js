@@ -22,7 +22,6 @@ const swiperSlider = (() => {
   return {
     init,
   };
-
 })();
 
 export default swiperSlider;

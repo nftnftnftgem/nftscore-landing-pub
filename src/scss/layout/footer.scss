@@ -29,11 +29,12 @@ section {
 .footer-wrap {
 	display: flex;
 	flex-direction: column-reverse;
-	align-items: center;
+	align-items: left;
 
 	@include media(">=tablet") {
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center;
 	}
 }
 

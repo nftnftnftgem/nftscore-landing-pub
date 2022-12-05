@@ -43,7 +43,7 @@
 
 .ranking-content {
 	background: #e0eaf1;
-	padding: 3rem;
+	padding: 3rem 0 3rem 3rem;
 	display: flex;
 
 	@include media(">=desktop") {

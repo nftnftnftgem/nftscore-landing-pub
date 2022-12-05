@@ -14,6 +14,7 @@
 		@include media(">=tablet") {
 			margin-right: 2.5rem;
 		}
+		
 	}
 }
 
@@ -143,6 +144,10 @@
 	margin-left: auto;
 	display: flex;
 	align-items: center;
+	.icon{
+		color: #a0a6ae;
+	}
+	
 }
 
 .main-link {
@@ -204,5 +209,14 @@
 	svg {
 		transition: $base-transition;
 		color: #a0a6ae;
+	}
+}
+
+.header-options_icons{
+	margin-right: 10px;
+	display: flex;
+	align-items: center;
+	@include media("<=phone-lg") {
+		display: none;
 	}
 }

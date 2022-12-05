@@ -28,23 +28,89 @@
 	@include media(">=desktop") {
 		padding: 7rem 7rem 0 7rem;
 	}
+	@include media("<=phone") {
+		.main-title{
+			margin-bottom: 0;
+		}
+	}
+	
 }
 
 .community-wrap {
 	display: flex;
 	flex-wrap: wrap;
 	margin: -2rem;
-
+	
+	@include media("<=tablet"){
+		flex-direction: column-reverse;
+	}
 	@include media(">=desktop") {
 		margin: 0 -3.3rem;
 		flex-wrap: nowrap;
 	}
 }
 
+
 .community {
 	padding: 2rem;
 	width: 100%;
-
+	&::after{
+		content: '';
+		background-color: rgba(255, 255, 255, 0.5);
+		border-radius: 50%;
+		width: 20rem;
+		height: 20rem;
+		display: none;
+		@include media("<=phone") {
+			height: 14.5rem;
+			width: 14.5rem;
+		}
+	}
+	&:first-child{
+		&::after{
+			content: '';
+			background-color: rgba(255, 255, 255, 0.5);
+			border-radius: 11.5rem;
+			width: 20rem;
+			height: 31rem;
+			@include media("<=phone") {
+				width: 14.5rem;
+				height: 22.3rem;
+			}
+			
+		}
+	}
+	
+	@include media("<=tablet") {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items:flex-end;
+		padding: 0;
+		gap: 2rem;
+		&::after{	
+			display: inline-block;
+			
+		}
+		&:nth-child(2) {
+			flex-direction: row-reverse;
+		}
+		&:nth-child(3){
+			.community__wrap{
+				width: 100%;
+				max-width: 20.2rem;	
+				transform: translateY(110px);
+				@include media("<=phone") {
+					transform: translateY(80px);
+					padding: 2.4rem 2.7rem;
+					max-width: 14.5rem;
+				}
+			}
+								
+		}
+		
+			
+	}
 	@include media(">=tablet") {
 		width: calc(100% / 3);
 	}
@@ -81,7 +147,18 @@
 		justify-content: center;
 		transition: $base-transition;
 		position: relative;
+		@include media("<=tablet"){
+			&:last-child{
+				width: 100%;
+				max-width: 20.2rem;
+			
+				@include media("<=phone") {
+					padding: 1.8rem 2.7rem;
+					max-width: 14.5rem;
+				}
+			}
 
+		}
 		@include media(">=desktop") {
 			width: 23rem;
 		}
@@ -104,6 +181,7 @@
 				display: block;
 			}
 		}
+		
 
 		&:before {
 			transform: translateY(200%);
@@ -141,6 +219,9 @@
 		font-size: 2rem;
 		color: $black;
 		margin-bottom: 1rem;
+		@include media("<=phone") {
+			font-size: 1.6rem;
+		}
 	}
 
 	&__desc {
@@ -149,6 +230,9 @@
 		text-align: center;
 		color: $black;
 		margin-bottom: 2.5rem;
+		@include media("<=phone") {
+			font-size: 1.2rem;
+		}
 	}
 
 	&__link {

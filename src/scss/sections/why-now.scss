@@ -1,0 +1,166 @@
+.why-now-section{
+    padding-top: 16rem;
+    padding-bottom: 16rem;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        @include media("<=widescreen") {
+                align-items: center;
+        }
+        @include media("<=tablet-lg"){
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    @include media("<=widescreen") {
+        padding-top: 10rem;
+    padding-bottom: 10rem;
+    }
+    @include media("<=phone-lg"){
+        padding-top: 5rem;
+    padding-bottom: 5rem;
+    }
+}
+.why-now_info{
+    display: flex;
+    flex-direction: column;
+    max-width: 44rem;
+    @include media("<=tablet-lg"){
+        flex-direction: row;     
+        max-width: none;
+        width: 100%;
+        justify-content: space-between;
+    }
+    @include media("<=phone"){
+        flex-direction: column;     
+       
+    }
+}
+.why-now_text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+   margin-bottom: 5rem;
+    margin-top: 3rem;
+    @include media("<=tablet-lg"){
+        max-width: 44rem;
+    }
+}
+.why-now_data{
+    padding: 1.4rem 2rem;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    border-radius: 47.5px;
+    width:fit-content;
+    margin-bottom: 2rem;
+    
+    
+    span{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;       
+        &:first-child{
+            margin-right: 10px;
+        }
+        @include media("<=phone"){
+            font-size: 16px;
+        }
+    }
+    &--gray{
+        background-color: #E0EAF1;
+    };
+    &--orange{
+        background-color:#FFECE1;
+        
+    }
+    &--yellow{
+        background-color:#FFF86C;
+    }
+    @include media("<=phone"){
+        padding: 1.4rem 1.2rem;
+    }
+}
+
+
+
+.why-now_swiper {
+    width: 100%;
+    height: 100%;   
+    margin: 0;
+    position: relative; 
+    
+  }
+
+  .swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-container{
+        height: 100%;
+        position: relative;
+        width: 100%;
+        max-width: 74rem;
+        max-height: 46rem;
+        background: #eee;
+       
+        @include media("<=widescreen") {
+            max-width: 54rem;
+            max-height: 36rem;
+        }
+        @include media("<=tablet-lg"){
+            max-width: 100%;
+            max-height: none;
+        }
+    
+  }
+
+  .why-now_next, .why-now_prev{
+    position: absolute;
+    top: 35px;
+    left: 85px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+     border-radius: 6px;
+     padding: 6px 10px;
+    z-index: 5;
+   svg{
+     max-width: 1.3rem;        
+   }
+   &:hover{
+     background-color: #000;
+     svg{
+         fill:#fff;       
+       }
+ }
+    @include media("<=phone"){
+       top: 25px;
+       left: 75px;
+    }
+ }
+ .why-now_prev{
+     left: 37px;
+     
+     svg{
+         transform: rotate(180deg);
+       }
+       @include media("<=phone"){
+        left: 27px;
+     }
+ }
