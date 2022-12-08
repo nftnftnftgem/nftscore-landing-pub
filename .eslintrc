@@ -1,7 +1,8 @@
 {
 	"globals": {
 		"jQuery": true,
-		"$": true
+		"$": true,
+		
 	},
 	"env": {
 		"browser": true,
@@ -15,4 +16,6 @@
 			"windows"
 		]
 	}
+	
+	
 }
